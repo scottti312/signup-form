@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  margin: 0;
+}
+
+input, label {
+  display: block;
+}
+
+
+.backsplash {
+  display: flex;
+  position: relative;
+  text-align: center;
+  width: max(20vw, 50vw);
+  height: 100vh;
+  background-size: contain;
+  overflow: hidden;
+}
+
+img#backsplash {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+
+.picture-credit {
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.register-intro {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  background-color: #F9FAFB;
+  width: 100%;
+}
+
+.register-card {
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 30vh;
+  width: calc(100% - 100px);
+  padding: 50px;
+  background-color: #FFFFFF;
+  overflow: scroll;
+}
+
+
+.picture-credit, a {
+  color: white;
+}
+
