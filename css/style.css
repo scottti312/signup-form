@@ -68,8 +68,12 @@ img#backsplash {
   margin-top: 5px
 }
 
+.card-container > * {
+  transition: all 0.3s ease-in;
+}
+
 .card-container {
-  transition: all 0.2s ease-in;
+  transition: all 0.3s ease-in;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,7 +98,6 @@ img#backsplash {
 .register-card {
   display: flex;
   justify-content: center;
-  transition: all 0.2s ease-in;
   box-shadow: 0 10px 20px -2px var(--color-shadow-box);
   height: 200px;
   width: calc(100% - 100px);
@@ -103,16 +106,15 @@ img#backsplash {
 }
 
 label {
-  transition: all 0.2s ease-in;
   color: var(--color-base-text);
 }
 
 .register-card input {
-  transition: all 0.2s ease-in;
   background-color: var(--color-input-box);
   border-radius: 5px;
   border: 1px solid #5D7388;
   padding-left: 10px;
+  transition: all 0.2s ease-in;
   height: 28px;
   color: var(--color-base-text);
 }
@@ -155,6 +157,10 @@ input, label {
   column-gap: 80px;
   width: 80%;
   height: 100%;
+}
+
+.footer {
+  color: var(--color-base-text);
 }
 
 .picture-credit, a {
