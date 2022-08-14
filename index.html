@@ -6,6 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/style.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,24 +18,40 @@
     </div>
   </div>
   <div class="card-container">
-    <div class="register-intro">Welcome to the sign up page. Enter your information below to get started!</div>
+    <button class="theme-toggle">Toggle Theme</button>
+    <div class="register-intro">Welcome to the sign up page. Enter your information below to get started!
+      <p>(Don't type your real info)</p>
+    </div>
     <div class="register-card">
-      <form id="register-form">
-        <label for="firstName">First Name</label>
-        <input type="text" id="firstName">
-        <label for="lastName">Last Name</label>
-        <input type="text" id="lastName">
-        <label for="email">Email</label>
-        <input type="text" id="email">
-        <label for="phone">Phone Number</label>
-        <input type="text" id="phone">
-        <label for="password">Password</label>
-        <input type="text" id="password">
-        <label for="confirm-pass">Confirm Password</label>
-        <input type="text" id="confirm-pass">
-        <input type="submit">
+      <form action="http://httpbin.org/post" method="post" id="register-form">
+        <div>
+          <label for="firstName">First Name</label>
+          <input type="text" name="firstName" id="firstName">
+        </div>
+        <div>
+          <label for="lastName">Last Name</label>
+          <input type="text" name="lastName" id="lastName">
+        </div>
+        <div>
+          <label for="email">Email
+            <input type="text" name="email" id="email">
+          </label>
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="text" name="phone" id="phone">
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="text" name="password" id="password">
+        </div>
+        <div>
+          <label for="confirm-pass">Confirm Password</label>
+          <input type="text" id="confirm-pass">
+        </div>
       </form>
     </div>
+    <button id="submit" type="submit" form="register-form">Submit</button>
   </div>
 </body>
 
