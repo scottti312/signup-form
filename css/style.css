@@ -1,11 +1,29 @@
+:root.dark {
+  --color-base-bg: rgb(18,18,18);
+  --color-base-text: rgb(240,240,240);
+  --color-shadow-box: rgb(240, 240, 240, 0.35);
+  --color-input-box: rgb(100, 100, 100);
+}
+
+:root.light {
+  --color-base-bg: #F9FAFB
+  --color-base-text: rgb(18,18,18);
+  --color-shadow-box: rgb(0, 0, 0, 0.35);
+  --color-input-box: rgb(240,240,240);
+}
+
+:root {
+  --color-base-bg: #F9FAFB
+  --color-base-text: rgb(18,18,18);
+  --color-shadow-box: rgb(0, 0, 0, 0.35);
+  font-family: Roboto; 
+}
+
 body {
   display: flex;
   margin: 0;
 }
 
-input, label {
-  display: block;
-}
 
 
 .backsplash {
@@ -32,30 +50,83 @@ img#backsplash {
 }
 
 .register-intro {
+  transition: all 0.2s ease-in;
+  color: var(--color-base-text);
   text-align: center;
   font-size: 1.5rem;
 }
 
+.register-intro p {
+  transition: all 0.2s ease-in;
+  color: var(--color-base-text);
+  font-size: 1rem;
+  margin-top: 5px
+}
+
 .card-container {
+  transition: all 0.2s ease-in;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 30px;
   align-items: center;
-  background-color: #F9FAFB;
+  background-color: var(--color-base-bg);
   width: 100%;
 }
 
 .register-card {
-  display: flex;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  height: 30vh;
+  transition: all 0.2s ease-in;
+  box-shadow: 0 10px 20px -2px var(--color-shadow-box);
+  height: 200px;
   width: calc(100% - 100px);
+  background-color: var(--color-base-bg);
   padding: 50px;
-  background-color: #FFFFFF;
-  overflow: scroll;
 }
 
+label {
+  transition: all 0.2s ease-in;
+  color: var(--color-base-text);
+}
+
+.register-card input {
+  transition: all 0.2s ease-in;
+  background-color: var(--color-input-box);
+  border-radius: 5px;
+  border: 1px solid #5D7388;
+  padding-left: 10px;
+  height: 28px;
+}
+
+.register-card input:focus {
+  outline: none !important;
+  border: 1px solid #5D7388 ;
+  box-shadow: 0 0 10px 0px #A1C5D1;
+}
+
+#submit {
+  width: 200px;
+  height: 70px;
+  background-color: #5D7388;
+  color: white;
+  border: 0px;
+  font-size: 20px;
+  font-weight:600;
+  border-radius: 12px;
+}
+
+input, label {
+  display: block;
+}
+
+
+#register-form {
+  transition: all 0.2s ease-in;
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+}
 
 .picture-credit, a {
   color: white;
