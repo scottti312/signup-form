@@ -29,28 +29,28 @@
       <form action="http://httpbin.org/post" method="post" id="register-form">
         <div>
           <label for="firstName">First Name</label>
-          <input type="text" name="firstName" id="firstName">
+          <input type="text" name="firstName" id="firstName" placeholder="John">
         </div>
         <div>
           <label for="lastName">Last Name</label>
-          <input type="text" name="lastName" id="lastName">
+          <input type="text" name="lastName" id="lastName" placeholder="Smith">
         </div>
         <div>
           <label for="email">Email
-            <input type="text" name="email" id="email">
+            <input type="email" name="email" id="email" placeholder="you@example.com" required>
           </label>
         </div>
         <div>
           <label for="phone">Phone Number</label>
-          <input type="text" name="phone" id="phone">
+          <input type="tel" name="phone" id="phone" placeholder="1234567890" required>
         </div>
         <div>
           <label for="password">Password</label>
-          <input type="text" name="password" id="password">
+          <input type="password" name="password" id="password" required>
         </div>
         <div>
           <label for="confirm-pass">Confirm Password</label>
-          <input type="text" id="confirm-pass">
+          <input type="password" id="confirm-pass" required>
         </div>
       </form>
     </div>
