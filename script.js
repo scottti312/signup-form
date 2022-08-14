@@ -41,14 +41,28 @@ function themeIcon() {
   }
 }
 
-// document.querySelector('.icon-container').addEventListener('mouseover', () => {
-//   console.log('happening');
-//   const icon = document.querySelector('.theme-toggle');
-//   icon.setAttribute('style', 'transform: scale(1.3, 1.3);')
-// });
+function checkPass() {
+  console.log('test)');
+  const pass = document.querySelector('#password');
+  const confirm_pass = document.querySelector('#confirm-pass');
+  if (pass.value == confirm_pass.value) {
+    pass.setAttribute('style', 'border: 2px solid green');
+    confirm_pass.setAttribute('style', 'border: 2px solid green');
+  } else {
+    pass.setAttribute('style', 'border: 2px solid red');
+    confirm_pass.setAttribute('style', 'border: 2px solid red');
+  }
+  if (confirm_pass.value == '') {
+    confirm_pass.setAttribute('style', 'border: 2px solid #5D7388')
+    pass.setAttribute('style', 'border: 2px solid #5D7388')
+  }
+}
 
-// document.querySelector('.icon-container').addEventListener('mouseout', () => {
-//   const icon = document.querySelector('.theme-toggle');
-//   icon.setAttribute('style', 'transform: scale(1.0, 1.0);')
-//   console.log('happening again');
-// });
+function submitPass() {
+  console.log('test');
+  const pass = document.querySelector('#password');
+  const confirm_pass = document.querySelector('#confirm-pass');
+  if (pass.value != confirm_pass.value) {
+    alert("Passwords don't match");
+  }
+}
