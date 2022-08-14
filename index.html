@@ -8,6 +8,7 @@
   <link href="css/style.css" rel="stylesheet">
   <script src="script.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/cbce618375.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -18,7 +19,9 @@
     </div>
   </div>
   <div class="card-container">
-    <button class="theme-toggle">Toggle Theme</button>
+    <div class="icon-container" onclick="themeIcon()">
+      <i class="fa-regular fa-moon fa-3x theme-toggle"></i>
+    </div>
     <div class="register-intro">Welcome to the sign up page. Enter your information below to get started!
       <p>(Don't type your real info)</p>
     </div>
@@ -51,7 +54,7 @@
         </div>
       </form>
     </div>
-    <button id="submit" type="submit" form="register-form">Submit</button>
+    <button id="submit" type="submit" form="register-form">Create Account</button>
   </div>
 </body>
 

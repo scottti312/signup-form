@@ -1,23 +1,27 @@
+:root {
+  --color-base-bg: #F9FAFB;
+  --color-base-text: rgb(40, 40, 40);
+  --color-card-bg: #FFFFFF;
+  --color-shadow-box: rgb(0, 0, 0, 0.35);
+  font-family: Roboto; 
+}
+
 :root.dark {
-  --color-base-bg: rgb(18,18,18);
+  --color-base-bg: rgb(43,42,51);
   --color-base-text: rgb(240,240,240);
-  --color-shadow-box: rgb(240, 240, 240, 0.35);
+  --color-card-bg: rgb(55,54,63);
+  --color-shadow-box: rgb(0,0,0, 0.95);
   --color-input-box: rgb(100, 100, 100);
 }
 
 :root.light {
-  --color-base-bg: #F9FAFB
-  --color-base-text: rgb(18,18,18);
+  --color-base-bg: #F9FAFB;
+  --color-card-bg: #FFFFFF;
+  --color-base-text: rgb(40,40,40);
   --color-shadow-box: rgb(0, 0, 0, 0.35);
   --color-input-box: rgb(240,240,240);
 }
 
-:root {
-  --color-base-bg: #F9FAFB
-  --color-base-text: rgb(18,18,18);
-  --color-shadow-box: rgb(0, 0, 0, 0.35);
-  font-family: Roboto; 
-}
 
 body {
   display: flex;
@@ -30,7 +34,7 @@ body {
   display: flex;
   position: relative;
   text-align: center;
-  width: max(20vw, 50vw);
+  width: max(40vw, 70vw);
   height: 100vh;
   background-size: contain;
   overflow: hidden;
@@ -44,7 +48,7 @@ img#backsplash {
 
 .picture-credit {
   position: absolute;
-  bottom: 5vh;
+  bottom: 3vh;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -54,6 +58,7 @@ img#backsplash {
   color: var(--color-base-text);
   text-align: center;
   font-size: 1.5rem;
+  width: 50%;
 }
 
 .register-intro p {
@@ -74,12 +79,25 @@ img#backsplash {
   width: 100%;
 }
 
+.icon-container {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-container:hover {
+  transform: scale(1.3, 1.3);
+}
+
 .register-card {
+  display: flex;
+  justify-content: center;
   transition: all 0.2s ease-in;
   box-shadow: 0 10px 20px -2px var(--color-shadow-box);
   height: 200px;
   width: calc(100% - 100px);
-  background-color: var(--color-base-bg);
+  background-color: var(--color-card-bg);
   padding: 50px;
 }
 
@@ -95,12 +113,15 @@ label {
   border: 1px solid #5D7388;
   padding-left: 10px;
   height: 28px;
+  color: var(--color-base-text);
 }
 
 .register-card input:focus {
   outline: none !important;
-  border: 1px solid #5D7388 ;
+  border: 1px solid #5D7388;
   box-shadow: 0 0 10px 0px #A1C5D1;
+  background-color: #E1F5FF;
+
 }
 
 #submit {
@@ -109,7 +130,7 @@ label {
   background-color: #5D7388;
   color: white;
   border: 0px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight:600;
   border-radius: 12px;
 }
@@ -122,8 +143,9 @@ input, label {
 #register-form {
   transition: all 0.2s ease-in;
   display: grid;
-  grid-template-columns: repeat(2, 300px);
+  grid-template-columns: repeat(2, 192px);
   justify-content: center;
+  column-gap: 80px;
   width: 80%;
   height: 100%;
 }
